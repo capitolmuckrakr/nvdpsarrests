@@ -12,6 +12,7 @@ def delimiter_check(datafile):
     file_length = int(file_length)
     delims = {}
     (_,_,_,h,m,s,_,_,_) = time.localtime()
+    print(h,m,s,sep=' ')
     for n in range(1,file_length+1):
         delim_count = get_ipython().getoutput(u"head -$n $datafile | tail -1 | grep -o ';' | wc -l")
         delim_count = int(delim_count[0].strip().split()[0])
