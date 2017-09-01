@@ -1,0 +1,13 @@
+CREATE INDEX ON arrests.arrest (lower(last_name));
+CREATE INDEX ON arrests.arrest (lower(first_name));
+CREATE INDEX ON arrests.arrest (arrest_date);
+CREATE INDEX ON arrests.arrest (offense_date);
+CREATE INDEX ON arrests.disposition (lower(last_name));
+CREATE INDEX ON arrests.disposition (lower(first_name));
+CREATE INDEX ON arrests.disposition (sentence_date);
+CREATE INDEX ON arrests.disposition (pardon_date);
+CREATE INDEX ON warrants.base (nam);
+CREATE INDEX ON warrants.base (dob);
+CREATE INDEX ON warrants.warrant (last_name);
+CREATE INDEX ON warrants.warrant (first_name);
+CREATE INDEX ON warrants.warrant (warrant_date);
