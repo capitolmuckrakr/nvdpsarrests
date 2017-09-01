@@ -7,7 +7,7 @@ import time
 def delimiter_check(datafile):
     file_cleaner = re.compile('\D+')
     file_length = get_ipython().getoutput(u'wc -l $datafile')
-    file_length = file_length[0].strip()#[:5]
+    file_length = file_length[0].strip()
     file_length = file_cleaner.split(file_length)[0]
     file_length = int(file_length)
     delims = {}
@@ -22,8 +22,9 @@ def delimiter_check(datafile):
     for x in sorted(delims,key=lambda x:len(delims[x]),reverse=True)[1:]:
         for l in delims[x]:
             lines.append(l)
-    print(datafile,': ',lines,sep='')
+    return lines
 
 if __name__ == '__main__':
     myfile = sys.argv[1]
-    delimiter_check(myfile)
+    print(delimiter_check(myfile))
+    
