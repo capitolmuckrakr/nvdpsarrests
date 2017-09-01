@@ -12,8 +12,8 @@ file_length = file_cleaner.split(file_length)[0]
 file_length = int(file_length)
 delims = {}
 for n in range(1,file_length+1):
-    if int(round(file_length,-3)) % n == 0:
-        print("Processing line ",n," of ",file_length,sep="")
+#    if int(round(file_length,-3)) % n == 0:
+#        print("Processing line ",n," of ",file_length,sep="")
     delim_count = get_ipython().getoutput(u"head -$n $datafile | tail -1 | grep -o ';' | wc -l")
     delim_count = int(delim_count[0].strip().split()[0])
     if delim_count not in delims:
