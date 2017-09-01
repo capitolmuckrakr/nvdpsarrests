@@ -22,6 +22,7 @@ def delimiter_check(datafile):
     for x in sorted(delims,key=lambda x:len(delims[x]),reverse=True)[1:]:
         for l in delims[x]:
             lines.append(l)
+    lines.sort()
     return lines
 
 if __name__ == '__main__':
