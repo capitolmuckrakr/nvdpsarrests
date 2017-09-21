@@ -1,12 +1,29 @@
 #!/bin/bash
 
-head -562161 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt > fixed_RECORDS_REQUEST_table1a.txt
-head -562163 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt | tail -2 > fixed_RECORDS_REQUEST_table1b.txt
-tail -1525206 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt > fixed_RECORDS_REQUEST_table1c.txtfix
+cp /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt /Users/acohen/data/NV_DPS_Arrests/data/old_RECORDS_REQUEST_table1.txt
 
-echo "fix the rows"
+head -562161 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt > /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1a.txt
+head -562163 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt | tail -2 > /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1b.txt
+tail -1525206 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt > /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1c.txt
 
-komodo fixed_RECORDS_REQUEST_table1b.txt
+echo "fix the rows in table1"
 
-cat fixed_RECORDS_REQUEST_table1a.txt fixed_RECORDS_REQUEST_table1b.txt fixed_RECORDS_REQUEST_table1c.txt >RECORDS_REQUEST_table1.txt
+open -a "/Applications/Komodo" /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1b.txt
 
+read -p "Press enter to continue"
+
+cat /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1a.txt /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1b.txt /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table1c.txt >/Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table1.txt
+
+cp /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table4.txt /Users/acohen/data/NV_DPS_Arrests/data/old_RECORDS_REQUEST_table4.txt
+
+head -283709 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table4.txt > /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4a.txt
+head -283711 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table4.txt | tail -2 > /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4b.txt
+tail -1443548 /Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table4.txt > /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4c.txt
+
+echo "fix the rows in table4"
+
+open -a "/Applications/Komodo" /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4b.txt
+
+read -p "Press enter to continue"
+
+cat /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4a.txt /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4b.txt /Users/acohen/data/NV_DPS_Arrests/data/fixed_RECORDS_REQUEST_table4c.txt >/Users/acohen/data/NV_DPS_Arrests/data/RECORDS_REQUEST_table4.txt
