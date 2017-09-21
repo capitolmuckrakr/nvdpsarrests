@@ -1,5 +1,5 @@
 CREATE TABLE arrests.disposition (
-arrest_rec_num int REFERENCES arrests.arrest (arrest_rec_num),
+arrest_rec_num int,-- REFERENCES arrests.arrest (arrest_rec_num),
 pcn text,
 citation_num text,
 court_docket text,
