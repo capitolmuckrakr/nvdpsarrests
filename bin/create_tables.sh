@@ -17,5 +17,3 @@ psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -
 psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}warrant.sql
 psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}warrantoffense.sql
 psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}warrantsupplemental.sql
-
-psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}indexes.sql
