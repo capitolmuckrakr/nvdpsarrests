@@ -1,6 +1,6 @@
 #!/bin/bash
 export SQL_CREATE_DIR="${HOME}/scripts/nvdpsarrests/sql_create_tables/"
-datafilebase=$HOME/data/NV_DPS_Arrests/data/edited_RECORDS_REQUEST_table
+datafilebase=$HOME/data/NV_DPS_Arrests/data/new_data/edited_RECORDS_REQUEST_table
 loaders=( "arrest" "arrestcomment" "dispositioncomment" "disposition" "offense" "deathlifecode" "dispositioncode" "offenseclasscode" "base" "basesupplemental" "warrantsupplemental" "warrantoffense" "transportationcode" "warrant" )
 n=1
 echo using endpoint $AWS_PG_HOST
