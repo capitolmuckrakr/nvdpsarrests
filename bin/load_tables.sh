@@ -7,8 +7,8 @@ echo using endpoint $AWS_PG_HOST
 for loader in "${loaders[@]}"
 do
     datafile=$datafilebase$n'.txt'
-    prog=/Users/acohen/scripts/nvdpsarrests/bin/load_$loader.sh
-    err=../logs/$loader'_err.log'
+    prog=$HOME/scripts/nvdpsarrests/bin/load_$loader.sh
+    err=$HOME/scripts/nvdpsarrests/logs/$loader'_err.log'
     n=$((n + 1))
     echo loading $datafile into table $loader
     "$prog" "$datafile" 2>$err &
