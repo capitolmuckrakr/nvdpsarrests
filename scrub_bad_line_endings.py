@@ -2,7 +2,7 @@
 import re, sys, os
 pattern = re.compile(r'([A-Za-z0-9])\r\n')
 file = sys.argv[1]
-outfile = 'processed_' + file
+outfile = 'scrubbed_' + file
 with open(file) as infile:
     with open(outfile,'w') as out:
         for line in infile.readlines():
