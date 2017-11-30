@@ -14,7 +14,7 @@ do
     "$prog" "$datafile" 2>$err &
     wait
 done
-echo cleaning up fields and indexing.
-psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}cleanup_fields.sql
-psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}indexes.sql
+#echo cleaning up fields and indexing.
+#psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}cleanup_fields.sql
+#psql --host=${AWS_PG_HOST} --port=5432 --username=acohen --dbname=nvdpsarrests -f ${SQL_CREATE_DIR}indexes.sql
 #> >(tee -a out.log) 2> >(tee -a err.log >&2)
