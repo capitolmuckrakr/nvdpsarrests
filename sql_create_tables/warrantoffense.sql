@@ -1,6 +1,6 @@
 CREATE TABLE warrants.warrantoffense (
 offense_rec_num int,
-warrant_rec_num int REFERENCES warrants.warrant (warrant_rec_num),
+warrant_rec_num int, --REFERENCES warrants.warrant (warrant_rec_num),
 offense_seq int,
 noc_5 text,
 noc_11 text,

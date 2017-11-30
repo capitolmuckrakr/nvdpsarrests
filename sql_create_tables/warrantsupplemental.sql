@@ -1,5 +1,5 @@
 CREATE TABLE warrants.warrantsupplemental (
-nin int REFERENCES warrants.base (nin),
+nin int, --REFERENCES warrants.base (nin),
 hoi text,
 coi text,
 wnm text,
