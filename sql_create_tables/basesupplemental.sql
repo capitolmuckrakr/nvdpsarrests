@@ -1,5 +1,5 @@
 CREATE TABLE warrants.basesupplemental (
-nin int REFERENCES warrants.base (nin),
+nin int, --REFERENCES warrants.base (nin),
 aka text,
 cau text,
 ccf text,
