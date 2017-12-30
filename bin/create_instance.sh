@@ -43,4 +43,6 @@ function terminate() {
 
 export -f terminate
 
+./create_tables.sh
+./load_tables.sh
 exec $SHELL -i
