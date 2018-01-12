@@ -12,7 +12,7 @@ export INSTANCEID=$(aws rds create-db-instance \
     --db-name nvdpsarrests \
     --vpc-security-group-ids $SGID \
     --db-instance-identifier nvarrests \
-    --allocated-storage 20 \
+    --allocated-storage 40 \
     --db-instance-class db.t2.small \
     --engine postgres \
     --master-username acohen \
