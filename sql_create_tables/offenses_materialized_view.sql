@@ -1,7 +1,7 @@
 CREATE MATERIALIZED VIEW public.offenses AS
-SELECT t1.arrest_rec_num,t1.pcn,t1.noc,t1.offense_class,t1.reg_status,
+SELECT t1.pk,t1.arrest_rec_num,t1.pcn,t1.noc,t1.offense_class,t1.reg_status,
 t1.amended_date::DATE,
-t1.amended_noc,t1.entering_agency,t1.bin,t1.amended_off_class,t1.reporting_ori,t1.pk
+t1.amended_noc,t1.entering_agency,t1.bin,t1.amended_off_class,t1.reporting_ori
 FROM arrests.offense t1
 WITH DATA;
 ALTER TABLE public.offenses
