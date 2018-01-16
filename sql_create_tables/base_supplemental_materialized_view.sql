@@ -24,10 +24,10 @@ CREATE INDEX pub_warrants_basesupplemental_ccf_idx
 ON public.warrants_basesupplemental
 USING btree (ccf);
 
-CREATE INDEX pub_warrants_basesupplemental_ccf_idx
+CREATE INDEX pub_warrants_basesupplemental_adb_idx
 ON public.warrants_basesupplemental
 USING btree (adb);
 
-CREATE INDEX pub_warrants_basesupplemental_ccf_idx
+CREATE INDEX pub_warrants_basesupplemental_asn_idx
 ON public.warrants_basesupplemental
 USING btree (asn);
