@@ -7,7 +7,7 @@ t1.failure_to_flag,t1.traffic_violation_flag,t1.day_service_only_flag,t1.request
 t2.definition AS transportation_code_definition,
 t1.packing_ori,t1.confirming_ori,t1.tot_cash_bail,t1.tot_surety_bail,t1.no_or_bail_flag,t1.no_bail_flag,t1.bail_comment,t1.miscellaneous,t1.entering_agency_ori,t1.retake_warrant,t1.local_warrant_num,t1.tot_converted_bail_amount
 FROM warrants.warrant t1
-LEFT JOIN warrants.transportation_code t2 ON t1.transportation_code = t2.transportation_code
+LEFT JOIN warrants.transportationcode t2 ON t1.transportation_code = t2.transportation_code
 WITH DATA;
 ALTER TABLE public.warrants
 OWNER TO acohen;
