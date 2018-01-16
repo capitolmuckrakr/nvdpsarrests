@@ -4,7 +4,7 @@ SELECT t1.warrant_rec_num,t1.bin,t1.nin,t1.last_name,t1.first_name,t1.middle_nam
 t1.warrant_date::DATE,
 t1.expiration_date::DATE,
 t1.failure_to_flag,t1.traffic_violation_flag,t1.day_service_only_flag,t1.requesting_ori,t1.orig_agency_case_num,t1.court_ori,t1.court_case_num,t1.prosecutor_ori,t1.prosecutor_num,t1.transporting_ori,
-t2.definition AS transportation_code_definition,
+t2.description AS transportation_code_description,
 t1.packing_ori,t1.confirming_ori,t1.tot_cash_bail,t1.tot_surety_bail,t1.no_or_bail_flag,t1.no_bail_flag,t1.bail_comment,t1.miscellaneous,t1.entering_agency_ori,t1.retake_warrant,t1.local_warrant_num,t1.tot_converted_bail_amount
 FROM warrants.warrant t1
 LEFT JOIN warrants.transportationcode t2 ON t1.transportation_code = t2.transportation_code
